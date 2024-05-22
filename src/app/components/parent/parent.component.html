@@ -1,0 +1,34 @@
+<div class="section">
+    <p class="title">ViewChild</p>
+    <button (click)="callChildMethod()">Вызвать метод из ребенка</button>
+</div>
+
+<app-child [data]="data" (childEvent)="handleChildEvent($event)">
+    <p>проецируемый контент</p>
+    <p #contentChild>content child from parent</p>
+    <app-child-2></app-child-2>
+    <app-child-2></app-child-2>
+</app-child>
+
+<div class="section">
+    <p class="title">ng-template</p>
+    <ng-template #template1>
+        <p>Template 1</p>
+    </ng-template>
+
+    <ng-template #template2>
+        <p>Template 2</p>
+    </ng-template>
+
+    <button (click)="showTemplate1()">Показать Template 1</button>
+    <button (click)="showTemplate2()">Показать Template 2</button>
+
+    <ng-container *ngTemplateOutlet="currentTemplate"></ng-container>
+</div>
+
+<div class="section">
+    <p class="title">ViewChildren</p>
+    <p #text></p>
+    <p #text></p>
+    <p #text></p>
+</div>

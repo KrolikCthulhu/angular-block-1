@@ -1,0 +1,45 @@
+<div class="section">
+    <p class="title">ng-content, ContentChild, ContentChildren</p>
+    <ng-content></ng-content>
+</div>
+
+<div class="section">
+    <p class="title">Output</p>
+    <button (click)="sendEvent()">emit</button>
+</div>
+
+<div class="section">
+    <p class="title">Интерполяция</p>
+    <p>{{ data }}</p>
+</div>
+
+<div class="section">
+    <p class="title">Привязка к событию</p>
+    <button (click)="click($event)">Click</button>
+</div>
+
+<div class="section">
+    <p class="title">Двусторонняя привязка</p>
+    <input type="text" [(ngModel)]="data" />
+</div>
+
+<div class="section">
+    <p class="title">Связывание свойств</p>
+    <img class="img" [src]="imageUrl" />
+</div>
+
+<div class="section">
+    <p class="title">Привязка к классам css</p>
+    <p [class.red-text]="isRed">текст</p>
+</div>
+
+<div class="section">
+    <p class="title">Привязка стилей</p>
+    <p [style.color]="isBlue ? 'blue' : 'red'">текст</p>
+</div>
+
+<div class="section">
+    <p class="title">Получение данных от сервиса</p>
+    <p>Текущее время: {{ currentTime }}</p>
+    <button (click)="updateTime()">обновить время</button>
+</div>
